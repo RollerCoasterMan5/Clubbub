@@ -1,0 +1,12 @@
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCX3FvJSEez60laJWWGsC4npKcQDgBYfs4",
+    authDomain: "my-awesome-project-e0e92.firebaseapp.com",
+    databaseURL: "https://my-awesome-project-e0e92.firebaseio.com",
+    storageBucket: "my-awesome-project-e0e92.appspot.com",
+    messagingSenderId: "23824945254"
+  };
+  firebase.initializeApp(config);
+</script>
