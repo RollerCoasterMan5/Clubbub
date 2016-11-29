@@ -1,3 +1,13 @@
 #dock {
 	border-radius: 25px;
 }
+
+.dockicon {
+	width: 20%;
+	padding-top: 1%;
+}
+
+.dockimg {
+	display: block;
+	margin: auto;
+}
