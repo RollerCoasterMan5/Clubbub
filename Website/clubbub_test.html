@@ -4,13 +4,33 @@
 <link rel="stylesheet" type="text/css" href="clubbub.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1">
+
 <body>
 	<h1>Hello world!</h1>
 	
-	<div id="dock" style="position: fixed; bottom: 0px; left: 0px; width: 100%; color: #fff; background: #000;">
-		<div id="club" style="background: #003399;">
-			<img src="ClubIcon.jpg" alt="ClubIcon" height="50" width="50">
-		</div>
+	<div id="dock" style="position: fixed; bottom: 0px; left: 0px; width: 100%; color: #fff; background: #003399;">
+		<table style="width: 100%;">
+			<tr>
+			<td class="dockicon"><div id="clubicon">
+				<img class="dockimg" src="Icons/ClubIcon.png" alt="ClubIcon" height="50" width="50">
+			</div></td>
+			<td class="dockicon"><div id="messageicon">
+				<img class="dockimg" src="Icons/MessageIcon.png" alt="MessageIcon" height="50" width="50">
+			</div></td>
+			<td class="dockicon"><div id="hubicon">
+				<img class="dockimg" src="Icons/HubIcon.png" alt="HubIcon" height="50" width="50">
+			</div></td>
+			<td class="dockicon"><div id="feedicon">
+				<img class="dockimg" src="Icons/FeedIcon.png" alt="FeedIcon" height="50" width="50">
+			</div></td>
+			<td class="dockicon"><div id="settingsicon">
+				<img class="dockimg" src="Icons/SettingsIcon.png" alt="SettingsIcon" height="50" width="50">
+			</div></td>
+			</tr>
+		</table>
 	</div>
 </body>
+
 </html>
+
+<!-- Look at this for tab switching http://stackoverflow.com/questions/23322536/how-to-switch-between-tabs-using-href -->
