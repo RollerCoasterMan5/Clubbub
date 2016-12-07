@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Firebase Web Quickstart</title>
+	</head>
+	<body>
+	
+	<h1 id="bigOne"></h1>
+	<form>
+		Club Name:<br><input id="chris" type="text" name="Club Name">
+		<input type="button" value="Submit" onclick="dummyInput()">
+	</form>
+	
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyCX3FvJSEez60laJWWGsC4npKcQDgBYfs4",
+		authDomain: "my-awesome-project-e0e92.firebaseapp.com",
+		databaseURL: "https://my-awesome-project-e0e92.firebaseio.com",
+		storageBucket: "my-awesome-project-e0e92.appspot.com",
+		messagingSenderId: "23824945254"
+	};
+	firebase.initializeApp(config);
+  
+	var bigOne = document.getElementById('bigOne');
+	var dbRef = firebase.database().ref().child('dummy');
+	dbRef.on('value', function seth1(snap) {
+		console.log("in on function");
+		snap.forEach(function (value) {
+		console.log(value.val());
+			bigOne.innerHtml = bigOne.innerHtml + value.val().name + '<br>';
+		});
+	});
+	
+	function dummyInput(){
+		var hithere = document.getElementById("chris").value;
+		console.log(hithere);
+		var dummyref = firebase.database().ref().child("dummy");
+		dummyref.push({name: hithere});
+	}
+	</script>
+	</body>
+</html>
