@@ -6,7 +6,7 @@
 	</head>
 	<body>
 	
-	<h1 id="bigOne"></h1>
+	<h1 id="bigOne">List:</h1>
 	<form>
 		Club Name:<br><input id="chris" type="text" name="Club Name">
 		<input type="button" value="Submit" onclick="dummyInput()">
@@ -26,12 +26,12 @@
 	firebase.initializeApp(config);
   
 	var bigOne = document.getElementById('bigOne');
+	console.log(bigOne);
 	var dbRef = firebase.database().ref().child('dummy');
 	dbRef.on('value', function seth1(snap) {
 		console.log("in on function");
 		snap.forEach(function (value) {
-		console.log(value.val());
-			bigOne.innerHtml = bigOne.innerHtml + value.val().name + '<br>';
+			bigOne.innerHTML = bigOne.innerHTML + '<br>' + value.val().name;
 		});
 	});
 	
