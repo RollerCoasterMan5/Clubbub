@@ -30,6 +30,7 @@
 	var dbRef = firebase.database().ref().child('dummy');
 	dbRef.on('value', function seth1(snap) {
 		console.log("in on function");
+		bigOne.innerHTML = "List:";
 		snap.forEach(function (value) {
 			bigOne.innerHTML = bigOne.innerHTML + '<br>' + value.val().name;
 		});
