@@ -13,3 +13,26 @@
 	display: block;
 	margin: auto;
 }
+
+.pagetitle {
+	margin-left: 3%;
+}
+
+.scrollbox {
+	margin:3%;
+	overflow-y:auto;
+	height: 100%;
+}
+
+.clubbox {
+	border-radius: 30px;
+	width: 50%;
+}
+
+.clubicon {
+	margin-right: 2%;
+}
+
+.clubbubpage {
+	height: 500px;
+}

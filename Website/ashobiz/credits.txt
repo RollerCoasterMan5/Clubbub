@@ -1,0 +1,7 @@
+Credits:
+
+1. jQuery - https://jquery.com/
+2. Bootstrap - http://getbootstrap.com/
+3. Font awesome icons - http://fontawesome.io/icons/
+4. Syntax highlighter - http://alexgorbatchev.com/SyntaxHighlighter/
+5. Unsplash - https://unsplash.com/

@@ -1,0 +1,43 @@
+**Version 1.0.7:**
+
+ - Update in 168,169,170. (HTML, CSS and less files)
+ - Two new components 215 and 216. (new css and less files)
+
+**Version 1.0.6.2:**
+
+ - Documentation update. No changes to actual product.
+
+**Version 1.0.6.1:**
+
+ - Documentation update. No changes to actual product.
+
+**Version 1.0.6:**
+
+ - Minor style update in 196,195,101. (specific css and less files)
+ - Style and HTML markup update in 201. (specific html code, css and less file)
+
+**Version 1.0.5:**
+
+ - Minor style changes (ashobiz.base.css)
+ 
+**Version 1.0.4:**
+
+ - Minor style changes (ashobiz.base.css).
+ - Updated sidebar and made some changes in doc.
+
+**Version 1.0.3:**
+
+ - Changed name.
+ - Added 114 new components (#101 to #214).
+
+**Version 1.0.2:**
+ 
+ - Minor design updates in #49 and #48 (html, css & less for #48,#49,#70)
+
+**Version 1.0.1:**
+	
+ - Minor design updates (ashobiz.base.css and less)
+ 
+**Version 1.0:**
+
+ - Initial release.

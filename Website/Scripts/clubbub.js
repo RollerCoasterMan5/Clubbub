@@ -1,4 +1,4 @@
-var currentPage = 3;
+var currentPage = 1;
 
 $(function() {
 	$('.active').on('click', function() {
@@ -17,3 +17,10 @@ function moveTo(page) {
 	$("div[value='" + page + "']").show();
 	currentPage = page;
 }
+
+function autoResizeDiv()
+        {
+            document.getElementById('main').style.height = window.innerHeight +'px';
+        }
+        window.onresize = autoResizeDiv;
+        autoResizeDiv();
