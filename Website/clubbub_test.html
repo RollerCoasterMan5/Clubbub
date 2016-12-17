@@ -18,14 +18,19 @@
         		<span class="icon-bar"></span>
       		</button>
       	</div>
+		<div value="1">Clubs Page</div>
+		<div value="2">Messages Page</div>
+		<div value="3">Hub Page</div>
+		<div value="4">Feed Page</div>
+		<div value="5">Settings Page</div>
       	<a class="navbar-brand" href="#">Clubbub</a>
      	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       	<ul class="nav navbar-nav">
-        	<li class="active"><a href="#">Clubs <span class="sr-only">(current)</span></a></li>
-        	<li><a href="#">Messages</a></li>
-        	<li><a href="#">Hub</a></li>
-        	<li><a href="#">Feed</a></li>
-        	<li><a href="#">Settings</a></li>
+        	<li class="active" data-page="1"><a href="#">Clubs <span class="sr-only">(current)</span></a></li>
+        	<li class="active" data-page="2"><a href="#">Messages</a></li>
+        	<li class="active" data-page="3"><a href="#">Hub</a></li>
+        	<li class="active" data-page="4"><a href="#">Feed</a></li>
+        	<li class="active" data-page="5"><a href="#">Settings</a></li>
     	</ul>
     </div>
   	</div><!-- /.container-fluid -->
@@ -56,6 +61,10 @@
 			</tr>
 		</table>
 	</div>
+	
+	<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="Scripts/clubbub.js"></script>
 </body>
 
 </html>
