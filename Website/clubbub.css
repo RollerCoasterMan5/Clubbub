@@ -27,7 +27,6 @@
 .clubbox {
 	border-radius: 30px;
 	width: 50%;
-	vertical-align: top;
 }
 
 .clubicon {
@@ -42,10 +41,11 @@
 .messagebox {
 	margin:3%;
 	overflow-y:auto;
-	height: 100px;
-	width: 1500px;
+	height: 75%;
+	width: 80%;
 }
 
 img{
-	float : left
+	margin-right: 3%;
+	float : left;
 }
