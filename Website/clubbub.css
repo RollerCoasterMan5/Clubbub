@@ -36,3 +36,15 @@
 .clubbubpage {
 	height: 500px;
 }
+
+
+.messagebox {
+	margin:3%;
+	overflow-y:auto;
+	height: 100px;
+	width: 1500px;
+}
+
+img{
+	float : left
+}
