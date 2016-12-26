@@ -52,7 +52,6 @@ function moveTo(page) {
 				});
 		}
 	} else { //Swapping to current page
-		console.log("Can't swap to current page.");
 		animating = false;
 	}
 }
