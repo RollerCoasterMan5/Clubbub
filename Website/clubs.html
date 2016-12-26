@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <title>Clubbub</title>
+
 <link rel="stylesheet" type="text/css" href="clubbub.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!--INCLUDE ICONS AND ASHOBIZ-->
+<script src="https://use.fontawesome.com/d3bea03464.js"></script>
+<link href="ashobiz/src/css/ashobiz.base.css" rel="stylesheet">
+<link href="ashobiz/src/css/ashobiz-90.css" rel="stylesheet">
+<link href="ashobiz/src/css/ashobiz-20.css" rel="stylesheet">
+<link href="ashobiz/src/css/ashobiz-206.css" rel="stylesheet">
 
 <body>
 	
@@ -21,41 +29,183 @@
       	<a class="navbar-brand" href="#">Clubbub</a>
      	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       	<ul class="nav navbar-nav">
-        	<li class="active"><a href="#">Clubs <span class="sr-only">(current)</span></a></li>
-        	<li><a href="#">Messages</a></li>
-        	<li><a href="#">Hub</a></li>
-        	<li><a href="#">Feed</a></li>
-        	<li><a href="#">Settings</a></li>
+        	<li class="active"><a href="clubs.html">Clubs <span class="sr-only">(current)</span></a></li>
+        	<li><a href="messages.html">Messages</a></li>
+        	<li><a href="hub.html">Hub</a></li>
+        	<li><a href="feed.html">Feed</a></li>
+        	<li><a href="settings.html">Settings</a></li>
     	</ul>
     </div>
   	</div><!-- /.container-fluid -->
 	</nav>
 	
-	<h1>Hello clubz!</h1>
-	
-	
-	<div id="dock" style="position: fixed; bottom: 0px; left: 0px; width: 100%; color: #fff; background: #003399;">
-		<table style="width: 100%;">
-			<tr>
-			<td class="dockicon"><div id="clubicon">
-				<a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'Club')">
-				<img class="dockimg" src="Icons/ClubIcon.png" alt="ClubIcon" height="50" width="50">
-			</div></td>
-			<td class="dockicon"><div id="messageicon">
-				<img class="dockimg" src="Icons/MessageIcon.png" alt="MessageIcon" height="50" width="50">
-			</div></td>
-			<td class="dockicon"><div id="hubicon">
-				<img class="dockimg" src="Icons/HubIcon.png" alt="HubIcon" height="50" width="50">
-			</div></td>
-			<td class="dockicon"><div id="feedicon">
-				<img class="dockimg" src="Icons/FeedIcon.png" alt="FeedIcon" height="50" width="50">
-			</div></td>
-			<td class="dockicon"><div id="settingsicon">
-				<img class="dockimg" src="Icons/SettingsIcon.png" alt="SettingsIcon" height="50" width="50">
-			</div></td>
-			</tr>
-		</table>
+	<div class="pageheader">
+		<table style="width: 100%;"><tr style="width: 100%;">
+			<td class="actioniconbox"><h1 class="pagetitle">Clubs</h1></td>
+			<td class="actioniconbox">
+				<a><i id="newclubbutt" onclick="openForm()" class="fa fa-plus-circle fa-3x actionicon"></i></a>
+				<div id="newclubform" class="modal">
+					<!-- Modal content -->
+  					<div class="modal-content">
+    					<div class="modal-header">
+    						<span class="close">&times;</span>
+    						<h2>New Club</h2>
+  						</div>
+  						<div class="modal-body">
+    						<form>
+    							<fieldset>
+    							<legend>Club Info</legend>
+    							Club name:<br>
+    							<input type="text" name="clubname">
+    							<br>Description:<br>
+    							<textarea type="text" name="clubdescription">
+    							</textarea><br>
+    							</fieldset>
+    							
+    							<fieldset>
+    							<legend>Personalize</legend>
+    							Club Icon:<br>
+    							<input type="text" name="clubicon">
+    							<br>Club Color:<br>
+    							<input type="text" name="clubcolor">
+    							</fieldset>
+    							
+    							<fieldset>
+    							<input type="submit">
+    							</fieldset>
+    						</form>
+    					</div>
+  					</div>
+  				</div>
+			</td>
+		</tr></table>
 	</div>
+		
+		
+	<div class="scrollbox">
+		<!--A Clubs-->
+		<div id="a-clubs"> 
+			<h3>A</h3>
+				<div class="a-206-1 a-bg-grey"></div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-microphone a-bg-red"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Acapella Club</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-gavel a-bg-rose"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Admissions Ambassadors</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-film a-bg-green"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Anime Club</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-gavel a-bg-blue"></i></a>
+					<!-- Text -->
+					<h4><a href="#">ACES</a></h4>
+				</div>
+			</div>
+			
+		<!--B Clubs-->
+		<div id="b-clubs"> 
+			<h3>B</h3>
+				<div class="a-206-1 a-bg-grey"></div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-futbol-o a-bg-violet"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Blues Club</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-futbol-o a-bg-orange"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Bocce Ball</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-desktop a-bg-rose"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Basic Electronics</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-futbol-o a-bg-violet"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Bowling</a></h4>
+				</div>
+			</div>
+			
+		<!--C Clubs-->
+		<div id="CClubs"> 
+			<h3>C</h3>
+				<div class="a-206-1 a-bg-grey"></div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-globe a-bg-red"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Chinese Club</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-android a-bg-blue"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Clavius Project</a></h4>
+				</div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-superpowers a-bg-grey"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Cross Country</a></h4>
+				</div>
+			</div>
+			
+		<!--D Clubs-->
+		<div id="DClubs"> 
+			<h3>D</h3>
+				<div class="a-206-1 a-bg-grey"></div>
+				<div class="a-20 clubbox">
+					<!-- Icon -->
+					<a href="#"><i class="fa fa-deaf a-bg-violet"></i></a>
+					<!-- Text -->
+					<h4><a href="#">Dauphin Players</a></h4>
+				</div>
+			</div>
+	</div>
+	<script>
+		// Get the modal
+		var modal = document.getElementById('newclubform');
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("newclubbutt");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal 
+		btn.onclick = function() {
+    		modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		    modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+</script>
 </body>
 
 </html>
