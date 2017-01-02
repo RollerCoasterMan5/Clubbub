@@ -37,8 +37,7 @@
     							Club name:<br>
     							<input type="text" name="clubname">
     							<br>Description:<br>
-    							<textarea type="text" name="clubdescription">
-    							</textarea><br>
+    							<textarea type="text" name="clubdescription"></textarea><br>
     							</fieldset>
     							
     							<fieldset>
@@ -50,7 +49,7 @@
     							</fieldset>
     							
     							<fieldset>
-    							<input type="submit">
+    							<input type="button" onclick="addClub()">
     							</fieldset>
     						</form>
     					</div>
@@ -61,93 +60,9 @@
 	</div>
 		
 		
-	<div class="scrollbox">
-		<!--A Clubs-->
-		<div id="a-clubs"> 
-			<h3>A</h3>
-				<div class="a-206-1 a-bg-grey"></div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-microphone a-bg-red"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Acapella Club</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-gavel a-bg-rose"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Admissions Ambassadors</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-film a-bg-green"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Anime Club</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-gavel a-bg-blue"></i></a>
-					<!-- Text -->
-					<h4><a href="#">ACES</a></h4>
-				</div>
-			</div>
-			
-		<!--B Clubs-->
-		<div id="b-clubs"> 
-			<h3>B</h3>
-				<div class="a-206-1 a-bg-grey"></div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-futbol-o a-bg-violet"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Blues Club</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-futbol-o a-bg-orange"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Bocce Ball</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-desktop a-bg-rose"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Basic Electronics</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-futbol-o a-bg-violet"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Bowling</a></h4>
-				</div>
-			</div>
-			
-		<!--C Clubs-->
-		<div id="CClubs"> 
-			<h3>C</h3>
-				<div class="a-206-1 a-bg-grey"></div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-globe a-bg-red"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Chinese Club</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-android a-bg-blue"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Clavius Project</a></h4>
-				</div>
-				<div class="a-20 clubbox">
-					<!-- Icon -->
-					<a href="#"><i class="fa fa-superpowers a-bg-grey"></i></a>
-					<!-- Text -->
-					<h4><a href="#">Cross Country</a></h4>
-				</div>
-			</div>
-			
+	<div class="scrollbox" id="ClubScrollBox">
 		<!--D Clubs-->
-		<div id="DClubs"> 
+		<div id="D-Clubs"> 
 			<h3>D</h3>
 				<div class="a-206-1 a-bg-grey"></div>
 				<div class="a-20 clubbox">
@@ -158,6 +73,10 @@
 				</div>
 			</div>
 	</div>
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="Scripts/clubs.js"></script>
 	<script>
 		w3IncludeHTML();
 		

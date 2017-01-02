@@ -12,7 +12,7 @@ $(function() {
 	firebase.initializeApp(config);
 	db = firebase.database();
 	dbRef = db.ref().child("clubs");
-	dbRef.orderByChild("clubs/clubID/name").on("child_added", function(snapshot) {
+	dbRef.orderByChild("lowerName").on("child_added", function(snapshot) {
 		var clubTab = document.createElement("div");
 		var clubIcon = document.createElement("i");
 		var clubName = document.createElement("h4");
@@ -25,24 +25,25 @@ $(function() {
 		var clubLetter = document.getElementById(firstLetter + "-Clubs");
 		if (clubLetter == null) {
 			clubLetter = document.createElement("div");
-			var clubHeader = document.createElement("h6");
+			var clubHeader = document.createElement("h3");
+			var clubBar = document.createElement("div");
 			clubLetter.id = firstLetter + "-Clubs";
 			clubHeader.innerHTML = firstLetter;
+			clubBar.className = "a-206-1 a-bg-grey";
 			clubLetter.appendChild(clubHeader);
-			$(clubLetter).append("<hr />");
+			clubLetter.appendChild(clubBar);
 			document.getElementById("ClubScrollBox").appendChild(clubLetter);
 		}
 		clubLetter.appendChild(clubTab);
-		console.log(snapshot.key + ": " + snapshot.val().name);
 	});
-	
-	/*var clubTab = document.createElement("div");
-	var clubIcon = document.createElement("i");
-	var clubName = document.createElement("h4");
-	clubTab.className = "a-20 clubbox";
-	clubIcon.className = "fa fa-microphone a-bg-red";
-	clubName.innerHTML = "Acapella Club";
-	clubTab.appendChild(clubIcon);
-	clubTab.appendChild(clubName);
-	document.getElementById("A-Clubs").appendChild(clubTab);*/
 });
+
+function addClub() {
+		dbRef.push({
+			name: $("[name='clubname']").val(),
+			lowerName: $("[name='clubname']").val().toLowerCase(),
+			description: $("[name='clubdescription']").val(),
+			icon: $("[name='clubicon']").val(),
+			color: $("[name='clubcolor']").val()
+		});
+	}
