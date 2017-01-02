@@ -1,0 +1,17 @@
+th {
+			height: 30px;
+			text-align: center;
+			font-weight: 700;
+		}
+		td {
+			height: 100px;
+		}
+		.today {
+			background: orange;
+		}
+		th:nth-of-type(7),td:nth-of-type(7) {
+			color: blue;
+		}
+		th:nth-of-type(1),td:nth-of-type(1) {
+			color: red;
+		}
