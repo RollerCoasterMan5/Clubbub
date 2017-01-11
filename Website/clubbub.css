@@ -40,8 +40,20 @@ SPECIFIC CLUB PAGE
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 */
 
+.clubpagecontent {
+	margin-left: 5%;
+}
+
 .joinclubbutt {
 	border-radius: 10px !important;
+}
+
+.clubstats {
+	width: 100%;
+}
+
+.clubdesctiption {
+	display: block;
 }
 
 /*CLUB PAGE
