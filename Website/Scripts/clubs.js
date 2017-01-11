@@ -35,15 +35,22 @@ $(function() {
 			document.getElementById("ClubScrollBox").appendChild(clubLetter);
 		}
 		clubLetter.appendChild(clubTab);
+		$(clubTab).on("click", function() {
+			var club = $(this).find("h4");
+			location.href = encodeURI("clubdescription.html&" + club[0].innerHTML);
+		});
 	});
 });
 
+
+
 function addClub() {
-		dbRef.push({
-			name: $("[name='clubname']").val(),
-			lowerName: $("[name='clubname']").val().toLowerCase(),
-			description: $("[name='clubdescription']").val(),
-			icon: $("[name='clubicon']").val(),
-			color: $("[name='clubcolor']").val()
-		});
-	}
+	dbRef.push({
+		name: $("[name='clubname']").val(),
+		lowerName: $("[name='clubname']").val().toLowerCase(),
+		description: $("[name='clubdescription']").val(),
+		icon: $("[name='clubicon']").val(),
+		color: $("[name='clubcolor']").val()
+	});
+}
+
