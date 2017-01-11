@@ -136,31 +136,3 @@ SPECIFIC CLUB PAGE
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
-
-/* Messages */
-
-.messageboxpre {
-	margin-right:2%;
-	overflow-y:scroll;
-	height: 100%;
-	width: 20%;
-	float : left;
-}
-
-.groupbox {
-	border-radius:0 !important;
-	margin:0 !important;
-}
-
-.messageboxpost {
-	float : right;
-	margin:0;
-	overflow-y:scroll;
-	height: 100%;
-	width: 100%;
-}
-
-img{
-	margin-right: 3%;
-	float : left;
-}
