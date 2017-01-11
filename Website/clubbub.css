@@ -67,11 +67,11 @@ SPECIFIC CLUB PAGE
 }
 
 
-.messagebox {
+.messageboxpre {
 	margin:3%;
-	overflow-y:auto;
+	overflow-y:scroll;
 	height: 75%;
-	width: 80%;
+	width: 20%;
 }
 
 img{
