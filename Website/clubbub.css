@@ -66,8 +66,25 @@ SPECIFIC CLUB PAGE
 	height: 500px;
 }
 
+
+.messageboxpre {
+	margin:3%;
+	overflow-y:scroll;
+	height: 100%;
+	width: 20%;
+}
+
+img{
+	margin-right: 3%;
+	float : left;
+}
+
+.clubtitle{
+	width: 30%;
+}
+
 .actioniconbox{
-	width: 50%;
+	width: 3%;
 }
 
 .actionicon{
@@ -135,32 +152,4 @@ SPECIFIC CLUB PAGE
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
-}
-
-/* Messages */
-
-.messageboxpre {
-	margin-right:2%;
-	overflow-y:scroll;
-	height: 100%;
-	width: 20%;
-	float : left;
-}
-
-.groupbox {
-	border-radius:0 !important;
-	margin:0 !important;
-}
-
-.messageboxpost {
-	float : right;
-	margin:0;
-	overflow-y:scroll;
-	height: 100%;
-	width: 100%;
-}
-
-img{
-	margin-right: 3%;
-	float : left;
 }
