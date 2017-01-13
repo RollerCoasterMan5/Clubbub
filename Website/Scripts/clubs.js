@@ -37,7 +37,7 @@ $(function() {
 		clubLetter.appendChild(clubTab);
 		$(clubTab).on("click", function() {
 			var club = $(this).find("h4");
-			location.href = encodeURI("clubdescription.html&" + club[0].innerHTML);
+			location.href = encodeURI("clubpage.html?" + club[0].innerHTML);
 		});
 	});
 });
