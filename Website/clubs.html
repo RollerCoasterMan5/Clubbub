@@ -31,13 +31,15 @@
     						<h2>New Club</h2>
   						</div>
   						<div class="modal-body">
-    						<form>
+    						<form style="height: 500px; overflow-y: scroll">
     							<fieldset>
     							<legend>Club Info</legend>
     							Club name:<br>
     							<input type="text" name="clubname">
     							<br>Description:<br>
     							<textarea type="text" name="clubdescription"></textarea><br>
+								<br>Cover Photo:<br>
+								<input type="file" name="pic" accept="image/*">
     							</fieldset>
     							
     							<fieldset>
@@ -47,9 +49,19 @@
     							<br>Club Color:<br>
     							<input type="text" name="clubcolor">
     							</fieldset>
-    							<input type="submit" onclick="addClub()">
-    							<fieldset>
-    							</fieldset>
+								
+								<fieldset>
+								<legend>Moderators</legend>
+								Student Moderator:<br>
+								<input type="text" name="stumod">
+								<br>Faculty Moderator:<br>
+								<input type="text" name="teachmod">
+								</fieldset>
+								
+								<fieldset>
+								<legend>Finished?</legend>
+								<input type="submit" onclick="addClub()">
+								</fieldset>
     						</form>
     					</div>
   					</div>
