@@ -1,9 +1,3 @@
-#dock {
-	border-top-right-radius: 25px;
-	border-top-left-radius: 25px;
-	height: 70px;
-}
-
 .dockicon {
 	width: 20%;
 	padding-top: 1%;
@@ -22,49 +16,6 @@
 	margin:3%;
 	overflow-y:auto;
 	height: 100%;
-}
-
-.clubbox {
-	border-radius: 30px;
-	width: 50%;
-	vertical-align: top;
-}
-
-.clubicon {
-	margin-right: 2%;
-}
-
-/*
--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-SPECIFIC CLUB PAGE
--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-*/
-
-.pagecontent {
-	margin-left: 5%;
-}
-
-.joinclubbutt {
-	border-radius: 10px !important;
-}
-
-.clubstats {
-	width: 100%;
-	border-width: 2px !important;
-	border-color: black !important;
-}
-
-.clubdesctiption {
-	display: block;
-}
-
-.statbox {
-	display: block;
-}
-p {
-	margin-left: 3% !important;
-	margin-top: 3% !important;
-	font-size: 2em;
 }
 
 /*CLUB PAGE
@@ -90,25 +41,11 @@ img{
 	float : left;
 }
 
-.clubtitle{
-	width: 30%;
-}
-
-fieldset{
-	margin-bottom: 5% !important;
-}
-
-.actioniconbox{
-	width: 3%;
-}
-
-.actionicon{
-	margin-top: 5%;
-	vertical-align: bottom;
-	margin-right: 5%;
-	float: right;
-}
-
+/*MODAL
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+//////////////////////////////////////
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+*/
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

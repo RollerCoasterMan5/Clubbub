@@ -1,0 +1,61 @@
+.clubbox {
+	border-radius: 30px;
+	width: 50%;
+	vertical-align: top;
+}
+
+.clubicon {
+	margin-right: 2%;
+}
+
+.clubtitle{
+	width: 30%;
+}
+
+fieldset{
+	margin-bottom: 5% !important;
+}
+
+.actioniconbox{
+	float: right;
+	vertical-align: bottom;
+}
+
+.actionicon{
+	margin-top: 5%;
+	float: left;
+}
+
+/*
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+SPECIFIC CLUB PAGE
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+*/
+
+.pagecontent {
+	margin-left: 5%;
+}
+
+.joinclubbutt {
+	border-radius: 10px !important;
+}
+
+.clubstats {
+	width: 100%;
+	border-width: 2px !important;
+	border-color: black !important;
+}
+
+.clubdesctiption {
+	display: block;
+}
+
+.statbox {
+	display: block;
+}
+
+p {
+	margin-left: 3% !important;
+	margin-top: 3% !important;
+	font-size: 2em;
+}

@@ -3,6 +3,7 @@
 <title>Clubbub</title>
 
 <link rel="stylesheet" type="text/css" href="clubbub.css">
+<link rel="stylesheet" type="text/css" href="clubs.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -27,7 +28,7 @@
 					<!-- Modal content -->
   					<div class="modal-content">
     					<div class="modal-header">
-    						<span class="close">&times;</span>
+    						<span id="addclose" class="close">&times;</span>
     						<h2>New Club</h2>
   						</div>
   						<div class="modal-body">
@@ -76,7 +77,36 @@
   				</div>
 			</td>
 			<td class="actioniconbox">
-				<a><i id="sortoptions" class="fa fa-archive fa-3x actionicon"></i></a>
+				<a><i id="sortoptionsbutt" class="fa fa-archive fa-3x actionicon"></i></a>
+				<div id="sortchooser" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+    						<span id="sortclose" class="close">&times;</span>
+    						<h2>Sort Options</h2>
+  						</div>
+  						<div class="modal-body">
+    						<form style="height: 500px; overflow-y: scroll">
+    							<fieldset>
+    							<legend>Choose Sort Method:</legend>
+    								<select name="sortmethod">
+    									<option value="AtoZ">A->Z</option>
+    									<option value="ZtoA">Z->A</option>
+    									<option value="MemberNum">Num of Members (High->Low)</option>
+    									<option value="MemberNum">Num of Members (Low->High)</option>
+    								</select><br><br>
+    								
+    								<input type="checkbox" name="sorttype" value="academic"> Academic</input><br>
+    								<input type="checkbox" name="sorttype" value="rec"> Recreational</input><br>
+    								<input type="checkbox" name="sorttype" value="service"> Service</input><br>
+    								<input type="checkbox" name="sorttype" value="sports"> Sports</input><br>
+    								<input type="checkbox" name="sorttype" value="stem"> STEM</input><br>
+    								<br><br>
+    								<input type="submit">
+    							</fieldset>
+    						</form>
+    					</div>
+					</div>
+				</div>
 			</td>
 		</tr></table>
 	</div>
@@ -92,29 +122,43 @@
 	<script>
 		w3IncludeHTML();
 		
-		// Get the modal
+		// Get the modals
 		var modal = document.getElementById('newclubform');
+		var sortmodal = document.getElementById('sortchooser');
 
-		// Get the button that opens the modal
+		// Get the buttons that open the modals
 		var btn = document.getElementById("newclubbutt");
+		var sortbtn = document.getElementById("sortoptionsbutt");
 
 		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
-
+		var span = document.getElementById("addclose");
+		var sortspan = document.getElementById("sortclose");
+		
 		// When the user clicks on the button, open the modal 
 		btn.onclick = function() {
     		modal.style.display = "block";
+		}
+		sortbtn.onclick = function() {
+			sortmodal.style.display = "block";
 		}
 
 		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() {
 		    modal.style.display = "none";
 		}
+		sortspan.onclick = function() {
+			sortmodal.style.display = "none";
+		}
 
 		// When the user clicks anywhere outside of the modal, close it
 		window.onclick = function(event) {
 		    if (event.target == modal) {
 		        modal.style.display = "none";
+		    }
+		}
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        sortmodal.style.display = "none";
 		    }
 		}
 </script>
