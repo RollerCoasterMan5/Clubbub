@@ -3,6 +3,19 @@
 	padding-top: 1%;
 }
 
+.actioniconbox{
+	float: right;
+	vertical-align: bottom;
+	padding-right: 15px;
+	margin-top: 20px;
+}
+
+.pagetitlebox{
+	float: left;
+	vertical-align: bottom;
+	margin-left: 3%;
+}
+
 .dockimg {
 	display: block;
 	margin: auto;
@@ -10,6 +23,7 @@
 
 .pagetitle {
 	margin-left: 3%;
+	float: left;
 }
 
 .scrollbox {
