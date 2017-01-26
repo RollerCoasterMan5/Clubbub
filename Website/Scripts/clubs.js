@@ -1,16 +1,18 @@
-var config, db, dbRef;
+var config, db, dbRef, storage;
 
 $(function() {
 	// Initialize Firebase
 	config = {
-		apiKey: "AIzaSyCX3FvJSEez60laJWWGsC4npKcQDgBYfs4",
-		authDomain: "my-awesome-project-e0e92.firebaseapp.com",
-		databaseURL: "https://my-awesome-project-e0e92.firebaseio.com",
-		storageBucket: "my-awesome-project-e0e92.appspot.com",
-		messagingSenderId: "23824945254"
+		apiKey: "AIzaSyC8WxKKsq3az-nHvyU2Vhoth_ltr7S3uyI",
+		authDomain: "clubbub-2d92f.firebaseapp.com",
+		databaseURL: "https://clubbub-2d92f.firebaseio.com",
+		storageBucket: "clubbub-2d92f.appspot.com",
+		messagingSenderId: "246547532752"
 	};
 	firebase.initializeApp(config);
 	db = firebase.database();
+	storage = firebase.storage();
+	
 	dbRef = db.ref().child("clubs");
 	dbRef.orderByChild("lowerName").on("child_added", function(snapshot) {
 		var clubTab = document.createElement("div");
