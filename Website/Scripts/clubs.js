@@ -63,31 +63,30 @@ function uploadPhoto() {
 	var uploader = document.getElementById('uploader');
 	var fileButton = document.getElementById('fileButton');
 	
-	fileButton.addEventListener('change', function(e) {
-		//Get file
-		var file = e.target.files[0];
+	//Get file
+	var file = fileButton.files[0];
 		
-		//Create Storage Ref
-		var storageRef = firebase.storage().ref('cover_photos/' + file.name);
+	//Create Storage Ref
+	var storageRef = firebase.storage().ref('cover_photos/' + file.name);
 		
-		//Upload file
-		var task = storageRef.put(file);
+	//Upload file
+	var task = storageRef.put(file);
 		
-		//Update progress bar
-		task.on('state_changed',
+	//Update progress bar
+	task.on('state_changed',
 			
-			function progress(snapshot) {
-				var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-				uploader.value = percentage;
-			},
+	function progress(snapshot) {
+		var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+		uploader.value = percentage;
+		console.log(percentage);
+	},
 			
-			function error(err) {
+	function error(err) {
 				
-			},
+	},
 			
-			function complete() {
+	function complete() {
 				
-			}
-		);
-	});
+	}
+	);
 }
