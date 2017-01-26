@@ -21,7 +21,7 @@
 	
 	<div class="pageheader">
 		<table style="width: 100%;"><tr style="width: 100%;">
-			<td class="clubtitle"><h1 class="pagetitle">Clubs</h1></td>
+			<td class="pagetitlebox"><h1 class="pagetitle">Clubs</h1></td>
 			<td class="actioniconbox">
 				<a><i id="newclubbutt" onclick="openForm()" class="fa fa-plus-circle fa-3x actionicon"></i></a>
 				<div id="newclubform" class="modal">
@@ -48,7 +48,8 @@
     							<br>Description:<br>
     							<textarea type="text" name="clubdescription"></textarea><br>
 								<br>Cover Photo:<br>
-								<input type="file" name="pic" accept="image/*">
+								<progress value="0" max="100" id="uploader">0%</progress>
+								<input type="file" value="upload" id="fileButton" accept="image/*" onchange="uploadPhoto()">
     							</fieldset>
     							
     							<fieldset>
@@ -109,6 +110,7 @@
 				</div>
 			</td>
 		</tr></table>
+		<hr class="titlehr">
 	</div>
 		
 		

@@ -16,16 +16,18 @@ fieldset{
 	margin-bottom: 5% !important;
 }
 
-.actioniconbox{
-	float: right;
-	vertical-align: bottom;
-	padding-right: 15px;
-	margin-top: 20px;
-}
-
 .actionicon{
 	margin-top: 5%;
 	float: left;
+}
+
+#uploader {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 40%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 20px;
 }
 
 /*

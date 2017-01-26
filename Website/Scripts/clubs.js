@@ -1,16 +1,18 @@
-var config, db, dbRef;
+var config, db, dbRef, storage;
 
 $(function() {
 	// Initialize Firebase
 	config = {
-		apiKey: "AIzaSyCX3FvJSEez60laJWWGsC4npKcQDgBYfs4",
-		authDomain: "my-awesome-project-e0e92.firebaseapp.com",
-		databaseURL: "https://my-awesome-project-e0e92.firebaseio.com",
-		storageBucket: "my-awesome-project-e0e92.appspot.com",
-		messagingSenderId: "23824945254"
+		apiKey: "AIzaSyC8WxKKsq3az-nHvyU2Vhoth_ltr7S3uyI",
+		authDomain: "clubbub-2d92f.firebaseapp.com",
+		databaseURL: "https://clubbub-2d92f.firebaseio.com",
+		storageBucket: "clubbub-2d92f.appspot.com",
+		messagingSenderId: "246547532752"
 	};
 	firebase.initializeApp(config);
 	db = firebase.database();
+	storage = firebase.storage();
+	
 	dbRef = db.ref().child("clubs");
 	dbRef.orderByChild("lowerName").on("child_added", function(snapshot) {
 		var clubTab = document.createElement("div");
@@ -54,3 +56,37 @@ function addClub() {
 	});
 }
 
+
+
+
+function uploadPhoto() {
+	var uploader = document.getElementById('uploader');
+	var fileButton = document.getElementById('fileButton');
+	
+	//Get file
+	var file = fileButton.files[0];
+		
+	//Create Storage Ref
+	var storageRef = firebase.storage().ref('cover_photos/' + file.name);
+		
+	//Upload file
+	var task = storageRef.put(file);
+		
+	//Update progress bar
+	task.on('state_changed',
+			
+	function progress(snapshot) {
+		var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+		uploader.value = percentage;
+		console.log(percentage);
+	},
+			
+	function error(err) {
+				
+	},
+			
+	function complete() {
+				
+	}
+	);
+}
