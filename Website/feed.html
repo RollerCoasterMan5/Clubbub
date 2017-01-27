@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <title>Clubbub</title>
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" type="text/css" href="clubbub.css">
 <link rel="stylesheet" type="text/css" href="feed.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,12 +23,43 @@
 		<table style="width: 100%;"><tr style="width: 100%;">
 			<td class="pagetitlebox"><h1 class="pagetitle">Feed</h1></td>
 			<td class="actioniconbox">
-				<a><i id="newclubbutt" onclick="openForm()" class="fa fa-plus-circle fa-3x actionicon"></i></a>
+				<a><i id="newfeedbutt" onclick="openForm()" class="fa fa-plus-circle fa-3x actionicon"></i></a>
+				<div id="newfeedform" class="modal">
+					<!-- Modal content -->
+  					<div class="modal-content">
+    					<div class="modal-header">
+    						<span id="addclose" class="close">&times;</span>
+    						<h2>New Feed Post</h2>
+  						</div>
+  						<div class="modal-body">
+    						<form style="height: 500px; overflow-y: scroll">
+    							<fieldset>
+    							<legend>Post Info</legend>
+    							Select Club:<br>
+    							<select name="clubgroup">
+    								<option value="academic">Academic</option>
+    								<option value="recreational">Recreational</option>
+    								<option value="service">Service</option>
+    								<option value="sport">Sports</option>
+    								<option value="STEM">STEM</option>
+    							</select><br>
+    							<br>Description:<br>
+    							<textarea maxlength="250" rows="4" cols="50" type="text" name="feedescription"></textarea><br>
+    							</fieldset>
+
+								<fieldset>
+								<legend>Finished?</legend>
+								<input type="submit" onclick="addClub()">
+								</fieldset>
+    						</form>
+    					</div>
+  					</div>
+  				</div>
 			</td>
 		</tr></table>
 		<hr class="titlehr">
 	</div>
-	
+
 	<div class="feedcolumn">
 		<div class="messagebox">
 		<!-- #136 -->
@@ -50,7 +83,7 @@
     			<!-- Heading -->
     			<h3 style="font-size:24px">Spikeball</h3>
     			<!-- Paragraph -->
-   				 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu vehicula metus. Etiam consequat tincidunt ornare. Duis tincidunt urna eu vehicula sodales. Pellentesque gravida lacinia dui, et accumsan justo malesuada quis. Pellentesque eleifend sapien in ante pharetra sodales. Suspendisse semper erat quam, id consectetur ligula consequat a. </p>
+   				 <p id="feeddescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu vehicula metus. Etiam consequat tincidunt ornare. Duis tincidunt urna eu vehicula sodales. Pellentesque gravida lacinia dui, et accumsan justo malesuada quis. Pellentesque eleifend sapien in ante pharetra sodales. Suspendisse semper erat quam, id consectetur ligula consequat a. </p>
    			</td>
    		</tr>
    		</table>
@@ -62,14 +95,26 @@
 		<input text = "">
 	</form>-->
 
-	
+
 </body>
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="Scripts/navbar.js"></script>
 <script>
 	w3IncludeHTML();
+	var modal = document.getElementById('newfeedform');
+	var btn = document.getElementById("newfeedbutt");
+	var span = document.getElementById("addclose");
+	btn.onclick = function() {
+			modal.style.display = "block";
+	}
+	span.onclick = function() {
+			modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+			if (event.target == modal) {
+					modal.style.display = "none";
+			}
+	}
 </script>
 
 </html>
