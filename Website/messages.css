@@ -54,7 +54,7 @@
 }
 
 img{
-	margin-right: 3%;
+	margin-right: 1%;
 	float : left;
 }
 
@@ -68,7 +68,7 @@ input[type=text], select {
     box-sizing: border-box;
 	position : fixed;
 	left: 30%;
-	top: 94.3vh;
+	top: 96vh;
 }
 
 .button {
@@ -83,7 +83,7 @@ input[type=text], select {
 	width : 5%;
 	position: fixed; 
 	left: 93.75%;
-	top: 94.9vh;
+	top: 96.5vh;
 	-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     text-decoration: none;
