@@ -28,7 +28,94 @@
 		<table style="width: 100%;"><tr style="width: 100%;">
 			<td class="pagetitlebox"><h1 class="pagetitle">Hub</h1></td>
 			<td class="actioniconbox">
-				<a><i id="newclubbutt" onclick="openForm()" class="fa fa-plus-circle fa-3x actionicon"></i></a>
+				<a><i id="neweventbutt" onclick="openForm()" class="fa fa-plus-circle fa-3x actionicon"></i></a>
+				<div id="neweventform" class="modal">
+					<!-- Modal content -->
+  					<div class="modal-content">
+    					<div class="modal-header">
+    						<span id="addclose" class="close">&times;</span>
+    						<h2>New Event</h2>
+  						</div>
+  						<div class="modal-body">
+    						<form style="height: 500px; overflow-y: scroll">
+    							<fieldset>
+    							<legend>Event Info</legend>
+    							
+								Event Name:<br>
+    							<input type="text" name="eventname">
+    							
+								<br><br>Club:<br>
+    							<select name="clubgroup">
+    								<option value="academic">Academic</option>
+    								<option value="recreational">Recreational</option>
+    								<option value="service">Service</option>
+    								<option value="sport">Sports</option>
+    								<option value="STEM">STEM</option>
+    							</select><br>
+    							
+								<br>Description:<br>
+    							<textarea type="text" name="clubdescription"></textarea><br>
+								
+								<br>Select Date:<br>
+								<select name="eventmonth">
+									<option value="January">January</option>
+									<option value="January">February</option>
+									<option value="January">March</option>
+									<option value="January">April</option>
+									<option value="January">May</option>
+									<option value="January">June</option>
+									<option value="January">July</option>
+									<option value="January">August</option>
+									<option value="January">September</option>
+									<option value="January">October</option>
+									<option value="January">November</option>
+									<option value="January">December</option>
+								</select>
+								<select name="eventday">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+								<select name="eventyear">
+									<option value="2017">2017</option>
+									<option value="2018">2018</option>
+								</select><br><br>
+								
+    							</fieldset>
+    							
+								<fieldset>
+								<legend>Finished?</legend>
+								<input type="submit" onclick="addClub()">
+								</fieldset>
+    						</form>
 			</td>
 		</tr></table>
 		<hr class="titlehr">
@@ -88,6 +175,22 @@
 <script src="Scripts/navbar.js"></script>
 <script>
 	w3IncludeHTML();
+	
+	var modal = document.getElementById('neweventform');
+	var btn = document.getElementById("neweventbutt");
+	var span = document.getElementById("addclose");
+	
+	btn.onclick = function() {
+    		modal.style.display = "block";
+		}
+	span.onclick = function() {
+		    modal.style.display = "none";
+		}
+	window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
 	
 	$(document).ready(function() {
 		
