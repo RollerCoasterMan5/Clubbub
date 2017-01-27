@@ -15,7 +15,7 @@ html {
 	float: right;
 	vertical-align: bottom;
 	padding-right: 3%;
-	margin-top: 20px;
+	margin-top: 80px;
 }
 
 .pagecontent {
@@ -27,6 +27,7 @@ html {
 	float: left;
 	vertical-align: bottom;
 	margin-left: 3%;
+	margin-top: 60px;
 }
 
 .dockimg {
