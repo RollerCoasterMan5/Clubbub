@@ -113,7 +113,7 @@ function addEvent() {
 		eventName: $("[name='eventname']").val(),
 		lowerEventName: $("[name='eventname']").val().toLowerCase(),
 		club: $("[name='clubgroup']").val(),
-		EventDescription: $("[name='eventdescription']").val(),
+		eventDescription: $("[name='eventdescription']").val(),
 		startmonth: $("[name='eventstartmonth']").val(),
 		startday: $("[name='eventstartday']").val(),
 		startyear: $("[name='eventstartyear']").val(),
