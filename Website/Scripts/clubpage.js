@@ -15,9 +15,12 @@ $(function() {
 	dbRef = db.ref("clubs");
 	dbRef.orderByChild("name").equalTo(clubname).on("child_added", function(snapshot)										 {
 		var clubdescription = snapshot.val().description;
-		console.log(clubname);
-		console.log(clubdescription);
-		console.log(snapshot.val());
+		var clubphotolocation = snapshot.val().coverphoto;
+		storageRef.child(clubphotolocation).getDownloadURL().then(function(url) {
+			$(".clubcoverphoto").attr("src",url);
+		}).catch(function(error) {
+			
+		});
 		$(".pagetitle").text(clubname);
 		$(".clubdescription").children().text(clubdescription);
 	});
