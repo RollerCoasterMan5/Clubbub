@@ -1,4 +1,4 @@
-var config, db, dbClubRef, storage;
+var config, db, dbRef, storage, clubphotopath;
 
 $(function() {
 	// Initialize Firebase
@@ -13,9 +13,9 @@ $(function() {
 	db = firebase.database();
 	storage = firebase.storage();
 	
-	dbClubRef = db.ref().child("clubs");
+	dbRef = db.ref().child("clubs");
 	
-	dbClubRef.orderByChild("lowerName").on("child_added", function(snapshot) {
+	dbRef.orderByChild("lowerName").on("child_added", function(snapshot) {
 		var clubTab = document.createElement("div");
 		var clubIcon = document.createElement("i");
 		var clubName = document.createElement("h4");
@@ -46,12 +46,13 @@ $(function() {
 });
 
 function addClub() {
-	dbClubRef.push({
+	dbRef.push({
 		name: $("[name='clubname']").val(),
 		lowerName: $("[name='clubname']").val().toLowerCase(),
 		description: $("[name='clubdescription']").val(),
 		icon: $("[name='clubicon']").val(),
-		color: $("[name='clubcolor']").val()
+		color: $("[name='clubcolor']").val(),
+		coverphoto: $(clubphotopath).val();
 	});
 }
 
@@ -85,4 +86,6 @@ function uploadPhoto() {
 				
 	}
 	);
+	
+	clubphotopath = task.snapshot.downloadURL;
 }
