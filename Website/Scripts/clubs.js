@@ -117,8 +117,8 @@ function addEvent() {
 		startmonth: $("[name='eventstartmonth']").val(),
 		startday: $("[name='eventstartday']").val(),
 		startyear: $("[name='eventstartyear']").val(),
-		endmonth: $("[name='eventendmonth']").val()
-		endday: $("[name='eventendday']").val()
+		endmonth: $("[name='eventendmonth']").val(),
+		endday: $("[name='eventendday']").val(),
 		endyear: $("[name='eventendyear']").val()
 	});
 }
