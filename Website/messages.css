@@ -1,5 +1,7 @@
 .messageboxpre {
-	margin-right:2%;
+	margin-right:0;
+	margin-left: 0;
+	margin-top: 0;
 	overflow-y:scroll;
 	height: 100%;
 	width: 30%;
@@ -13,10 +15,21 @@
 }
 
 .messageboxpost {
+	float : left;
 	margin-left:0;
 	overflow-y:scroll;
 	height: 100vh;
 	width: 100%;
+}
+
+.textboxholder {
+    float: right;
+    width: 70%
+}
+
+.titlebox {
+	margin-left : 2%;
+	background-color: rgba(0, 0, 255, 0.1);
 }
 
 .textbox {
