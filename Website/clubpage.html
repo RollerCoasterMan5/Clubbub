@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="clubbub.css">
 <link rel="stylesheet" type="text/css" href="clubs.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,29 +20,35 @@
 <body>
 	<div w3-include-html="navbar_top.html"></div>
 	
+	<!--CLUB HEADER-->
 	<div class="pageheader">
 		<table style="width: 100%;"><tr style="width: 100%;">
 			<td><h1 class="pagetitle"></h1></td>
 			<td class="actioniconbox">
-				<a href="" class="a-btn a-btn-lg a-btn-blue joinclubbutt">Join Club</a>
+				<a href="" class="a-btn a-btn-lg a-btn-red joinclubbutt">Leave Club<i class="fa fa-times buttonicon"></i></a>
+			</td>
+			<td class="actioniconbox">
+				<a href="" class="a-btn a-btn-lg a-btn-green joinclubbutt">Join Club<i class="fa fa-plus buttonicon"></i></a>
 			</td>
 		</tr></table>
 	</div>
 	<hr class="titlehr">
 	
-	<div class="clubpagecontent">
+	
+	<!--CLUB CONTENT-->
+	<div class="pagecontent">
 		<table style="width:100%; table-layout: fixed;">
-<!--CLUB HEADER-->
 			<tr style="width: 100%;">
+				
 				<!--CLUB COVER PHOTO-->
-				<td style="width: 80%;">
+				<td>
 					<div class="clubcoverphoto">
-						<img style="width: 80%; margin-left: 3%;" src="acapellacoverphoto.jpg">
+						<img class="clubcoverphoto" src="acapellacoverphoto.jpg">
 					</div>
 				</td>
 			
 				<!--CLUB STATS-->
-				<td style="width: 40%;">
+				<td style="width: 30%;">
 				<div class="clubstatdiv">
 				<table>
 					<tr>
@@ -49,7 +56,7 @@
 						<div class="a-13 clubstats">
 							<!--Heading-->
 							<h3>Members</h3>
-							<h2>23 <span class="a-red">+2</span></h2>
+							<h2 class="stattext">23 <span class="a-red">+2</span></h2>
 							<div class="a-13-b">
 								<div class="a-bg-red" style="width: 23%"></div>
 							</div>
@@ -72,7 +79,7 @@
 				</td>
 			</tr>
 			
-<!--CLUB DESCRIPTION ROW-->
+			<!--CLUB DESCRIPTION ROW-->
 			<tr>
 				<td style="width: 100%;">
 					<div class="clubdescription">
@@ -81,8 +88,24 @@
 				</td>
 			</tr>
 
+			<tr><td>
+			<!--WEEKLY CALENDAR-->
+			<div class="calendarweek">
+				<table style="width: 100%;">
+					<tr>
+						<td class="weekday"><p><strong>SUN</strong></p></td>
+						<td class="weekday a-bg-green"><p><strong>MON</strong></p><i class="fa fa-check fa-3x"></i></td>
+						<td class="weekday"><p><strong>TUE</strong></p></td>
+						<td class="weekday a-bg-green"><p><strong>WED</strong></p><i class="fa fa-check fa-3x"></i></td>
+						<td class="weekday"><p><strong>THU</strong></p></td>
+						<td class="weekday"><p><strong>FRI</strong></p></td>
+						<td class="weekday"><p><strong>SAT</strong></p></td>
+					</tr>
+				</table>
+			</div>
+			</td></tr>
 <!--CLUB MODERATORS ROW-->
-			<tr>
+			<tr style="margin-top: 20px;">
 				<td style="width: 100%;">
 					<div class="moderatorsdiv">
 					<table>

@@ -1,6 +1,14 @@
+html {
+	font-size: 12px;
+}
+
 .dockicon {
 	width: 20%;
 	padding-top: 1%;
+}
+
+.buttonicon {
+	margin-left: 5px;
 }
 
 .actioniconbox{
@@ -8,6 +16,11 @@
 	vertical-align: bottom;
 	padding-right: 3%;
 	margin-top: 20px;
+}
+
+.pagecontent {
+	margin-left: 3%;
+	margin-right: 3%;
 }
 
 .pagetitlebox{

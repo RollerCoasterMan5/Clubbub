@@ -36,8 +36,8 @@ SPECIFIC CLUB PAGE
 -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 */
 
-.pagecontent {
-	margin-left: 5%;
+.stattext {
+	font-size: 4em !important;
 }
 
 .joinclubbutt {
@@ -48,6 +48,11 @@ SPECIFIC CLUB PAGE
 	width: 100%;
 	border-width: 2px !important;
 	border-color: black !important;
+}
+
+.clubcoverphoto {
+	border-radius: 20px;
+	width: 90%;
 }
 
 .clubdesctiption {
@@ -63,3 +68,22 @@ p {
 	margin-top: 3% !important;
 	font-size: 2em;
 }
+
+/*WEEKDAY CALENDAR*/
+.weekday {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
+	height: 150px;
+	width: 200px;
+	margin-bottom: 2px;
+	border: 3px solid #cccccc;
+	text-align: center;
+	font-size: 2em;
+	vertical-align: top;
+}
+
+.filledweekday {
+	background-color: #00ff00
+}
+
