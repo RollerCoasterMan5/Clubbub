@@ -52,7 +52,7 @@ function addClub() {
 		description: $("[name='clubdescription']").val(),
 		icon: $("[name='clubicon']").val(),
 		color: $("[name='clubcolor']").val(),
-		coverphoto: $(clubphotopath).val()
+		coverphoto: clubphotopath
 	});
 }
 
@@ -75,17 +75,14 @@ function uploadPhoto() {
 	function progress(snapshot) {
 		var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 		uploader.value = percentage;
-		console.log(percentage);
 	},
 			
 	function error(err) {
-				
+		
 	},
 			
 	function complete() {
-				
+		clubphotopath = task.snapshot.downloadURL;
 	}
 	);
-	
-	clubphotopath = task.snapshot.downloadURL;
 }
