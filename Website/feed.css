@@ -7,7 +7,9 @@
 .a-112 {
 	margin-bottom: 60px;
 }
-
+#feedtable {
+	width:100%;
+}
 #first_column {
 	width:100px;
 
@@ -31,5 +33,5 @@ span {
 }
 
 .feedcolumn {
-	width: 80%;
+	width: 100%;
 }
