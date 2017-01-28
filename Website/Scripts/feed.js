@@ -25,6 +25,7 @@ $(function() {
 	dbFeedRef.orderByChild("time").on("child_added", function(snapshot) {
 		var feedTable = document.getElementById("feedtable");
 		var messageRow = document.createElement("tr");
+		var messageDiv = document.createElement("div");
 		var firstColumn = document.createElement("td");
 		var profileDiv = document.createElement("div");
 		var profileIcon = document.createElement("img");
@@ -64,8 +65,12 @@ $(function() {
 		secondColumn.appendChild(clubName);
 		secondColumn.appendChild(feedMessage);
 		
-		messageRow.appendChild(firstColumn);
-		messageRow.appendChild(secondColumn);
+		messageDiv.className = "a-136 a-br a-br-blue";
+		messageDiv.id = "messagebox";
+		messageDiv.appendChild(firstColumn);
+		messageDiv.appendChild(secondColumn);
+		
+		messageRow.appendChild(messageDiv);
 		
 		feedTable.insertBefore(messageRow, feedTable.childNodes[0]);
 	});
