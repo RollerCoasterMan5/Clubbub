@@ -12,7 +12,15 @@ $(function() {
 	firebase.initializeApp(config);
 	db = firebase.database();
 
-	dbEventRef = db.ref().child("events");
+	dbClubRef = db.ref().child("clubs");
+	dbEventRefRef = db.ref().child("events");
+	
+	dbClubRef.orderByChild("lowerName").on("child_added", function(snapshot) {
+		var cluboption = document.createElement("option");
+		cluboption.value = snapshot.val().name;
+		cluboption.innerHTML = snapshot.val().name;
+		$("[name='club']").append(cluboption);
+	});
 });
 
 function formatDates(snapshot) {
