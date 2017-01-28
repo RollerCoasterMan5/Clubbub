@@ -40,10 +40,10 @@
     						<form style="height: 500px; overflow-y: scroll">
     							<fieldset>
     							<legend>Event Info</legend>
-    							
+
 								Event Name:<br>
     							<input type="text" name="eventname">
-    							
+
 								<br><br>Club:<br>
     							<select name="clubgroup">
     								<option value="academic">Academic</option>
@@ -52,10 +52,10 @@
     								<option value="sport">Sports</option>
     								<option value="STEM">STEM</option>
     							</select><br>
-    							
+
 								<br>Description:<br>
     							<textarea type="text" name="clubdescription"></textarea><br>
-								
+
 								<br>Select Start Date:<br>
 								<select name="eventstartmonth">
 									<option value="January">January</option>
@@ -108,7 +108,7 @@
 									<option value="2017">2017</option>
 									<option value="2018">2018</option>
 								</select><br><br>
-								
+
 								<br>Select End Date:<br>
 								<select name="eventendmonth">
 									<option value="January">January</option>
@@ -161,9 +161,9 @@
 									<option value="2017">2017</option>
 									<option value="2018">2018</option>
 								</select><br><br>
-								
+
     							</fieldset>
-    							
+
 								<fieldset>
 								<legend>Finished?</legend>
 								<input type="submit" onclick="addEvent()">
@@ -173,12 +173,16 @@
 		</tr></table>
 		<hr class="titlehr">
 	</div>
-	
+
 	<div class="pagecontent">
 		<table style="width: 100%;">
+
+		<!--CALENDAR GOES HERE-->
 		<tr style="width: 100%">
 			<div id="calendar"></div>
 		</tr>
+
+		<!--MY CLUBS AND MANAGE CLUBS-->
 		<tr style="width: 100%">
 			<td style="width: 30%;">
 			<div id="myclubs">
@@ -186,34 +190,65 @@
 				<hr class="titlehr">
 				<div class="a-20">
 					<!-- Icon -->
-					<a href="clubpage.html"><i class="fa fa-gavel a-bg-red"></i></a>
+					<a href="clubpage.html"><i class="fa fa-handshake-o a-bg-red"></i></a>
 					<!-- Text -->
-					<h4><a href="clubpage.html">STUPID CLUB</a></h4>
+					<h4><a href="clubpage.html">Strategy Board Game</a></h4>
+				</div>
+				<div class="a-20">
+					<!-- Icon -->
+					<a href="clubpage.html"><i class="fa fa-laptop a-bg-blue"></i></a>
+					<!-- Text -->
+					<h4><a href="clubpage.html">WWT Hackathon</a></h4>
+				</div>
+				<div class="a-20">
+					<!-- Icon -->
+					<a href="clubpage.html"><i class="fa fa-microphone a-bg-green"></i></a>
+					<!-- Text -->
+					<h4><a href="clubpage.html">Liturgical Musicians</a></h4>
+				</div>
+				<div class="a-20">
+					<!-- Icon -->
+					<a href="clubpage.html"><i class="fa fa-android a-bg-rose"></i></a>
+					<!-- Text -->
+					<h4><a href="clubpage.html">Robotics Club</a></h4>
 				</div>
 			</div>
 			</td>
-			
+
 			<td style="width: 20%;">
 			<div id="manageclubs">
 				<h1>Manage Clubs</h1>
 				<hr class="titlehr">
 				<div class="a-20">
 					<!-- Icon -->
-					<a href="clubpage.html"><i class="fa fa-gavel a-bg-red"></i></a>
+					<a href="clubpage.html"><i class="fa fa-handshake-o a-bg-red"></i></a>
 					<!-- Text -->
-					<h4><a href="clubpage.html">STUPID CLUB</a></h4>
+					<h4><a href="clubpage.html">Strategy Board Game</a></h4>
+				</div>
+				<div class="a-20">
+					<!-- Icon -->
+					<a href="clubpage.html"><i class="fa fa-laptop a-bg-blue"></i></a>
+					<!-- Text -->
+					<h4><a href="clubpage.html">Tech Club</a></h4>
+				</div>
+				<div class="a-20">
+					<!-- Icon -->
+					<a href="clubpage.html"><i class="fa fa-laptop a-bg-blue"></i></a>
+					<!-- Text -->
+					<h4><a href="clubpage.html">WWT Hackathon</a></h4>
 				</div>
 			</div>
 			</td>
 		</tr>
-		<tr style="width: 100%">
+
+		<tr style="margin-top: 100px; width: 100%">
 			<td>
 			<h1>Profile Settings</h1>
 			<hr class="titlehr">
 			<h3 style="display: inline-block;">Profile Picture:</h3><br><br>
 			<h3 style="display: inline-block;">Username:</h3><br><br>
 			<h3 style="display: inline-block;">Change Password</h3><br><br>
-			
+
 			<label class="switch">
 				<input type="checkbox">
 				<div class="slider round"></div>
@@ -221,7 +256,7 @@
 			</td>
 		</tr>
 	</div>
-	
+
 </body>
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -229,11 +264,11 @@
 <script src="Scripts/hub.js"></script>
 <script>
 	w3IncludeHTML();
-	
+
 	var modal = document.getElementById('neweventform');
 	var btn = document.getElementById("neweventbutt");
 	var span = document.getElementById("addclose");
-	
+
 	btn.onclick = function() {
     		modal.style.display = "block";
 		}
@@ -245,9 +280,9 @@
 		        modal.style.display = "none";
 		    }
 		}
-	
+
 	$(document).ready(function() {
-		
+
 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
@@ -315,7 +350,7 @@
 				}
 			]
 		});
-		
+
 	});
 </script>
 </html>

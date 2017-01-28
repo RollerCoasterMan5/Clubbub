@@ -2,6 +2,11 @@ html {
 	font-size: 12px;
 }
 
+td{
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
 textarea{
 	resize: none;
 	rows: 4;
