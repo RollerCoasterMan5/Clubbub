@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <title>Clubbub</title>
-
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 <link rel="stylesheet" type="text/css" href="clubbub.css">
 <link rel="stylesheet" type="text/css" href="clubs.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
 
 <body>
 	<div w3-include-html="navbar_top.html"></div>
-	
+
 	<div class="pageheader">
 		<table style="width: 100%;"><tr style="width: 100%;">
 			<td class="pagetitlebox"><h1 class="pagetitle">Clubs</h1></td>
@@ -51,7 +51,7 @@
 								<progress value="0" max="100" id="uploader">0%</progress>
 								<input type="file" value="upload" id="fileButton" accept="image/*" onchange="uploadPhoto()">
     							</fieldset>
-    							
+
     							<fieldset>
     							<legend>Personalize</legend>
     							Club Icon:<br>
@@ -59,7 +59,7 @@
     							<br>Club Color:<br>
     							<input type="text" name="clubcolor">
     							</fieldset>
-								
+
 								<fieldset>
 								<legend>Moderators</legend>
 								Student Moderator:<br>
@@ -67,7 +67,7 @@
 								<br>Faculty Moderator:<br>
 								<input type="text" name="teachmod">
 								</fieldset>
-								
+
 								<fieldset>
 								<legend>Finished?</legend>
 								<input type="submit" onclick="addClub()">
@@ -95,7 +95,7 @@
     									<option value="MemberNum">Num of Members (High->Low)</option>
     									<option value="MemberNum">Num of Members (Low->High)</option>
     								</select><br><br>
-    								
+
     								<input type="checkbox" name="sorttype" value="academic"> Academic</input><br>
     								<input type="checkbox" name="sorttype" value="rec"> Recreational</input><br>
     								<input type="checkbox" name="sorttype" value="service"> Service</input><br>
@@ -112,10 +112,10 @@
 		</tr></table>
 		<hr class="titlehr">
 	</div>
-		
-		
+
+
 	<div class="scrollbox" id="ClubScrollBox">
-		
+
 	</div>
 	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 	<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
@@ -124,7 +124,7 @@
 	<script src="Scripts/navbar.js"></script>
 	<script>
 		w3IncludeHTML();
-		
+
 		// Get the modals
 		var modal = document.getElementById('newclubform');
 		var sortmodal = document.getElementById('sortchooser');
@@ -136,8 +136,8 @@
 		// Get the <span> element that closes the modal
 		var span = document.getElementById("addclose");
 		var sortspan = document.getElementById("sortclose");
-		
-		// When the user clicks on the button, open the modal 
+
+		// When the user clicks on the button, open the modal
 		btn.onclick = function() {
     		modal.style.display = "block";
 		}
@@ -167,7 +167,7 @@
 </script>
 </body>
 <script>
-	
+
 </script>
 </html>
 
