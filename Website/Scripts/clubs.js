@@ -1,4 +1,4 @@
-var config, db, dbRef, storage, clubphotopath;
+var config, db, dbRef, storage, clubphotopath = "";
 
 $(function() {
 	// Initialize Firebase
