@@ -52,7 +52,9 @@ function addClub() {
 		description: $("[name='clubdescription']").val(),
 		icon: $("[name='clubicon']").val(),
 		color: $("[name='clubcolor']").val(),
-		coverphoto: clubphotopath
+		coverphoto: clubphotopath,
+		studentmod: $("[name='studentmod']").val(),
+		teachermod: $("[name='teachermod']").val()
 	});
 }
 

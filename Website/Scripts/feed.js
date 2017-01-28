@@ -34,6 +34,9 @@ $(function() {
 		var clubName = document.createElement("h3");
 		var feedMessage = document.createElement("p");
 		
+		var dateUTC = new Date(parseInt(snapshot.val().time)).toString().split(" ");
+		var messageDate = dateUTC[1] + " " + dateUTC[2] + ", " + dateUTC[3];
+		
 		profileIcon.src = "TestAvatar.jpg";
 		profileIcon.id = "profile_pic";
 		
@@ -41,7 +44,7 @@ $(function() {
 		profileName.innerHTML = "Kevin G";
 		
 		timePosted.style = "color:#A9A9A9; font-size: 1em; margin-top: 0px !important;";
-		timePosted.innerHTML = snapshot.val().time;
+		timePosted.innerHTML = messageDate;
 		
 		profileDiv.className = "a-112"
 		profileDiv.appendChild(profileIcon);

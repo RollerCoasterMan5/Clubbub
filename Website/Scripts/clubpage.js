@@ -13,18 +13,16 @@ $(function() {
 	db = firebase.database();
 	var clubname = decodeURI(window.location.search.substring(1));
 	dbRef = db.ref("clubs");
-	console.log(clubname);
 	dbRef.orderByChild("name").equalTo(clubname).on("child_added", function(snapshot) {
-		console.log(snapshot.val().coverphoto);
 		var clubdescription = snapshot.val().description;
-		console.log(clubdescription);
-		console.log(clubname);
 		var clubphoto = document.getElementById("clubcoverphoto");
-		console.log(clubphoto);
-		console.log(snapshot.val().coverphoto);
+		var studentmod = document.getElementById("studentmod");
+		var teachermod = document.getElementById("teachermod");
 		clubphoto.src = snapshot.val().coverphoto;
 		$(".pagetitle").text(clubname);
 		$(".clubdescription").children().text(clubdescription);
+		studentmod.innerHTML = studentmod.innerHTML + snapshot.val().studentmod;
+		teachermod.innerHTML = teachermod.innerHTML + snapshot.val().teachermod;
 	});
 	console.log(clubname);
 });
