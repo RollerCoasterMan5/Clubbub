@@ -37,20 +37,16 @@
     							<fieldset>
     							<legend>Post Info</legend>
     							Select Club:<br>
-    							<select name="clubgroup">
-    								<option value="academic">Academic</option>
-    								<option value="recreational">Recreational</option>
-    								<option value="service">Service</option>
-    								<option value="sport">Sports</option>
-    								<option value="STEM">STEM</option>
+    							<select name="club">
+    								
     							</select><br>
     							<br>Description:<br>
-    							<textarea maxlength="250" rows="4" cols="50" type="text" name="feedescription"></textarea><br>
+    							<textarea maxlength="250" rows="4" cols="50" type="text" name="feeddescription"></textarea><br>
     							</fieldset>
 
 								<fieldset>
 								<legend>Finished?</legend>
-								<input type="submit" onclick="addClub()">
+								<input type="submit" onclick="addFeedMessage()">
 								</fieldset>
     						</form>
     					</div>
@@ -65,7 +61,7 @@
 		<div class="messagebox">
 		<!-- #136 -->
 		<div class="a-136 a-br a-br-blue" id="messagebox">
-		<table>
+		<table id="feedtable">
 		<tr>
 		<!-- #112 -->
 			<td id="first_column">
@@ -99,6 +95,9 @@
 
 </body>
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="Scripts/feed.js"></script>
 <script src="Scripts/navbar.js"></script>
 <script>
 	w3IncludeHTML();
