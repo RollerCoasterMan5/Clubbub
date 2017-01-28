@@ -1,4 +1,4 @@
-var config, db, dbRef, storage;
+var config, db, dbRef, storage, clubphotopath;
 
 $(function() {
 	// Initialize Firebase
@@ -14,7 +14,6 @@ $(function() {
 	storage = firebase.storage();
 	
 	dbRef = db.ref().child("clubs");
-	dbEventRef = db.ref().child("event");
 	
 	dbRef.orderByChild("lowerName").on("child_added", function(snapshot) {
 		var clubTab = document.createElement("div");
@@ -46,83 +45,16 @@ $(function() {
 	});
 });
 
-function formatDates(snapshot) {
-	var startMonth = snapshot.val().eventstartmonth;
-	var startDay = snapshot.val().eventstartday;
-	var startYear = snapshot.val().eventstartyear;
-	var endMonth = snapshot.val().eventendmonth;
-	var endDay = snapshot.val().eventendday;
-	var endYear = snapshot.val().eventendyear;
-	
-	var startdate = startYear + "-";
-	switch(startMonth) {
-		case January:
-			startdate += "01-"
-			break;
-		case February:
-			startdate += "02-"
-			break;
-		case March:
-			startdate += "03-"
-			break;
-		case April:
-			startdate += "04-"
-			break;
-		case May:
-			startdate += "05-"
-			break;
-		case June:
-			startdate += "06-"
-			break;
-		case July:
-			startdate += "07-"
-			break;
-		case August:
-			startdate += "08-"
-			break;
-		case September:
-			startdate += "09-"
-			break;
-		case October:
-			startdate += "10-"
-			break;
-		case November:
-			startdate += "11-"
-			break;
-		case December:
-			startdate += "12-"
-			break;
-		default:
-			console.log("ERROR!");
-	}
-	startdate += startDay;
-}
-
 function addClub() {
 	dbRef.push({
 		name: $("[name='clubname']").val(),
 		lowerName: $("[name='clubname']").val().toLowerCase(),
 		description: $("[name='clubdescription']").val(),
 		icon: $("[name='clubicon']").val(),
-		color: $("[name='clubcolor']").val()
+		color: $("[name='clubcolor']").val(),
+		coverphoto: $(clubphotopath).val();
 	});
 }
-
-function addEvent() {
-	dbEventRef.push({
-		eventName: $("[name='eventname']").val(),
-		lowerEventName: $("[name='eventname']").val().toLowerCase(),
-		club: $("[name='clubgroup']").val(),
-		eventDescription: $("[name='eventdescription']").val(),
-		startmonth: $("[name='eventstartmonth']").val(),
-		startday: $("[name='eventstartday']").val(),
-		startyear: $("[name='eventstartyear']").val(),
-		endmonth: $("[name='eventendmonth']").val(),
-		endday: $("[name='eventendday']").val(),
-		endyear: $("[name='eventendyear']").val()
-	});
-}
-
 
 function uploadPhoto() {
 	var uploader = document.getElementById('uploader');
@@ -154,4 +86,6 @@ function uploadPhoto() {
 				
 	}
 	);
+	
+	clubphotopath = task.snapshot.downloadURL;
 }
