@@ -1,6 +1,6 @@
 var config, db, dbRef;
 
-$(function() {
+$(window).on("load", function() {
 	// Initialize Firebase
 	config = {
 		apiKey: "AIzaSyC8WxKKsq3az-nHvyU2Vhoth_ltr7S3uyI",
