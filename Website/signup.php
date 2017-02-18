@@ -8,16 +8,6 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 $confirmpassword = $_POST["passwordconfirm"];
 
-print $firstname;
-print $lastname;
-print $DOBMonth;
-print $DOBDay;
-print $DOBYear;
-print $school;
-print $email;
-print $password;
-print $passwordconfirm;
-
 header( 'Location: clubs.html' );
 
 ?>

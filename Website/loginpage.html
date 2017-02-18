@@ -25,15 +25,15 @@
 	<div class="pagecontent">
 		<!--<div class="g-signin2 " data-onsuccess="onSignIn"></div>-->
 		<br>
-		<form>
+		<form action="login.php" onsubmit="return checkUser()" method="post">
 			<fieldset>
 				<legend>Email</legend>
-				<input type="text" name="usernameinput" required>
+				<input type="text" name="email" required>
 				<br><br>
 				<legend>Password</legend>
-				<input type="text" name="passwordinput" required>
+				<input type="password" name="password" required>
 				<br><br><br>
-				<input type="submit">
+				<input type="submit" value="Sign in.">
 			</fieldset>
 		</form>
 	</div>
@@ -43,7 +43,7 @@
 	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 	<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="Scripts/clubs.js"></script>
+	<script src="Scripts/loginpage.js"></script>
 	<script>
 		w3IncludeHTML();
 	</script>
