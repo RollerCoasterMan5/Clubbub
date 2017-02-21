@@ -42,7 +42,7 @@ $(window).on("load", function() {
 		profileIcon.id = "profile_pic";
 		
 		profileName.style = "color:black;";
-		profileName.innerHTML = "Kevin G";
+		profileName.innerHTML = snapshot.val().author;
 		
 		timePosted.style = "color:#A9A9A9; font-size: 1em; margin-top: 0px !important;";
 		timePosted.innerHTML = messageDate;
@@ -77,9 +77,16 @@ $(window).on("load", function() {
 });
 
 function addFeedMessage() {
-	dbFeedRef.push({
-		message: $("[name='feeddescription']").val(),
-		club: $("[name='club']").val(),
-		time: Date.now().toString()
-	});
+	if (user.emailVerified) {
+		dbFeedRef.push({
+			message: $("[name='feeddescription']").val(),
+			author: user.displayName,
+			club: $("[name='club']").val(),
+			time: Date.now().toString()
+		});
+	} else if (user) {
+		alert("Please verify your e-mail before adding feed posts.");
+	} else {
+		alert("Please signup or login before adding feed posts.");
+	}
 }

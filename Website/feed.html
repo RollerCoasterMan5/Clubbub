@@ -66,34 +66,29 @@
    		</table>
 	</div>
 
-	<!--<form style="position:fixed; left:60px; background-color:white;">
-		<input text = "">
-	</form>-->
-
-
+	<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+	<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="Scripts/feed.js"></script>
+	<script src="Scripts/navbar.js"></script>
+	<script>
+		w3IncludeHTML();
+		var modal = document.getElementById('newfeedform');
+		var btn = document.getElementById("newfeedbutt");
+		var span = document.getElementById("addclose");
+		btn.onclick = function() {
+				modal.style.display = "block";
+		}
+		span.onclick = function() {
+				modal.style.display = "none";
+		}
+		window.onclick = function(event) {
+				if (event.target == modal) {
+						modal.style.display = "none";
+				}
+		}
+	</script>
 </body>
-<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-<script src="http://code.jquery.com/jquery-3.1.1.js"></script>
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="Scripts/feed.js"></script>
-<script src="Scripts/navbar.js"></script>
-<script>
-	w3IncludeHTML();
-	var modal = document.getElementById('newfeedform');
-	var btn = document.getElementById("newfeedbutt");
-	var span = document.getElementById("addclose");
-	btn.onclick = function() {
-			modal.style.display = "block";
-	}
-	span.onclick = function() {
-			modal.style.display = "none";
-	}
-	window.onclick = function(event) {
-			if (event.target == modal) {
-					modal.style.display = "none";
-			}
-	}
-</script>
 
 </html>
 

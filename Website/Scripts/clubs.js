@@ -15,14 +15,6 @@ $(window).on("load", function() {
 	
 	dbRef = db.ref().child("clubs");
 	
-	firebase.auth().onAuthStateChanged(function(user) {
-		if (user) {
-			console.log(user);
-		} else {
-			console.log(user);
-		}
-	});
-	
 	dbRef.orderByChild("lowerName").on("child_added", function(snapshot) {
 		var clubTab = document.createElement("div");
 		var clubIcon = document.createElement("i");

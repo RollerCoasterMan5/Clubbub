@@ -18,10 +18,7 @@ function checkUser() {
 	firebase.auth().signInWithEmailAndPassword($("[name='email']").val(), $("[name='password']").val()).then(response => {
 		document.forms[0].submit();
 	}).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-		
-        alert(errorMessage);
+        alert(error.message);
         console.log(error);
 		
 		return false
